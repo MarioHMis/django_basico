@@ -4,3 +4,6 @@ from django.shortcuts import render
 
 def index_favoritos(request):
     return render(request, 'index.html')
+
+def crear_favoritos(request):
+    return render(request, 'favoritos/crear.html')
