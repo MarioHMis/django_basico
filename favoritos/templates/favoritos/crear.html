@@ -7,14 +7,11 @@
   </head>
   <body>
     <h1>Nuevo Favorito</h1>
-    <form method="post">
+    <form method="POST">
       {% csrf_token %}
-      <label>Nombre</label>
-      <input type="text" />
-      <label>URL</label>
-      <input type="text" />
-
-      <input type="submit" />
+      <input type="text" name="nombre" placeholder="Nombre del favorito" />
+      <input type="url" name="url" placeholder="URL" />
+      <button type="submit">Enviar</button>
     </form>
   </body>
 </html>
