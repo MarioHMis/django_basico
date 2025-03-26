@@ -1,7 +1,7 @@
-from django import forms 
+from django import forms
 
 class FavoritoForm(forms.Form):
-    nombre = forms.CharField()
+    nombre  = forms.CharField()
     url = forms.URLField()
 
 class FavoritoModelForm():

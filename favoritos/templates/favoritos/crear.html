@@ -8,10 +8,8 @@
   <body>
     <h1>Nuevo Favorito</h1>
     <form method="POST">
-      {% csrf_token %}
-      <input type="text" name="nombre" placeholder="Nombre del favorito" />
-      <input type="url" name="url" placeholder="URL" />
-      <button type="submit">Enviar</button>
+      {% csrf_token %} {{ form.as_p}}
+      <input type="submit" />
     </form>
   </body>
 </html>
