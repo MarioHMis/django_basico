@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Favoritos</h1>
+    <table style="border: 1px solid black">
+      <thead>
+        <tr>
+          <th>Nombre</th>
+          <th>url</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for favorito in favoritos_lista %}
+        <tr>
+          <td>{{ favorito.nombre }}</td>
+          <td>{{ favorito.url }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </body>
+</html>
