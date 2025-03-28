@@ -19,6 +19,7 @@
         <tr>
           <td>{{ favorito.nombre }}</td>
           <td>{{ favorito.url }}</td>
+          <td><a href="/borrar/{{ favorito.pk}}">Borrar</a></td>
         </tr>
         {% endfor %}
       </tbody>

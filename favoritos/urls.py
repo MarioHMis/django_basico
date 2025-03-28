@@ -6,5 +6,6 @@ app_name = 'favoritos'
 
 urlpatterns = [
     path('', index_favoritos),
-    path('crear', crear_favoritos)
+    path('crear', crear_favoritos),
+    path('borrar/<int:pk>', crear_favoritos),
 ]
