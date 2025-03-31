@@ -24,6 +24,10 @@
             <a href="{% url 'favoritos:borrar' favorito.pk %}">Borrar</a>
             <br />
             <a href="{% url 'favoritos:detalle' favorito.pk %}"> Detalle</a>
+            <br />
+            <a href="{% url 'favoritos:actualizar' favorito.pk %}"
+              >Actualizar</a
+            >
           </td>
         </tr>
         {% endfor %}

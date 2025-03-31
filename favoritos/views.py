@@ -41,4 +41,27 @@ def borrar_favoritos(request, pk):
 
 def detalle_favoritos(request, pk):
     favorito = Favoritos.objects.get(pk=pk)
+
     return render(request,'favoritos/detalle.html', context={'object':favorito})
+
+
+def actualizar_favoritos(request, pk):
+    favorito = Favoritos.objects.get(pk=pk)
+
+    form = FavoritoModelForm(instance=favorito)
+
+    if request.method == 'POST':
+        
+        form = FavoritoModelForm(request.POST, instance=favorito)
+        
+        if form.is_valid():
+            form.save()
+        else:
+            print(form.errors)
+
+            
+    context = {
+            'form':form
+        }
+       
+    return render(request, 'favoritos/crear.html',context)
