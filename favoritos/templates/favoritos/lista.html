@@ -1,14 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <body>
-    <h1>Favoritos</h1>
-    <p><a href="{% url 'favoritos:crear' %}">Nuevo</a></p>
-    <table style="border: 1px solid black">
+{% extends "base_bs530.html" %} {% block main %}
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <h1>Favoritos</h1>
+      <p>
+        <a href="{% url 'favoritos:crear' %}" class="btn btn-outline-primary"
+          >Nuevo</a
+        >
+      </p>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col">
+    <table class="table table-bordered table-hover">
       <thead>
         <tr>
           <th>Nombre</th>
@@ -21,11 +27,22 @@
           <td>{{ favorito.nombre }}</td>
           <td>{{ favorito.url }}</td>
           <td>
-            <a href="{% url 'favoritos:borrar' favorito.pk %}">Borrar</a>
+            <a
+              href="{% url 'favoritos:borrar' favorito.pk %}"
+              class="btn btn-outline-danger mb-2"
+              >Borrar</a
+            >
             <br />
-            <a href="{% url 'favoritos:detalle' favorito.pk %}"> Detalle</a>
+            <a
+              href="{% url 'favoritos:detalle' favorito.pk %}"
+              class="btn btn-outline-info mb-2"
+            >
+              Detalle</a
+            >
             <br />
-            <a href="{% url 'favoritos:actualizar' favorito.pk %}"
+            <a
+              href="{% url 'favoritos:actualizar' favorito.pk %}"
+              class="btn btn-outline-primary mb-2"
               >Actualizar</a
             >
           </td>
@@ -33,5 +50,6 @@
         {% endfor %}
       </tbody>
     </table>
-  </body>
-</html>
+  </div>
+</div>
+{% endblock main %} {% load static %}
