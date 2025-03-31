@@ -6,6 +6,9 @@
     <title>Document</title>
   </head>
   <body>
-    <h1>Detalle {{object}}</h1>
+    <h1>Detalle favorito</h1>
+    <p><a href="{% url 'favoritos:index' %}">Atras</a></p>
+    <p>{{object.nombre}}</p>
+    <p><a href="{{object.url}}">{{object.url}}</a></p>
   </body>
 </html>

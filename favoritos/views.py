@@ -19,7 +19,6 @@ def crear_favoritos(request):
 
     form = FavoritoModelForm()
 
-
     if request.method == 'POST':
         
         form = FavoritoModelForm(request.POST)
