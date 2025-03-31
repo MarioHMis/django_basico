@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .models import Favoritos
 from .forms import FavoritoModelForm
 
@@ -38,4 +38,4 @@ def crear_favoritos(request):
 
 def borrar_favoritos(request, pk):
     Favoritos.objects.get(pk=pk).delete()
-    return index_favoritos(request)
+    return redirect('favoritos:index')
