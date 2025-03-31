@@ -39,3 +39,7 @@ def crear_favoritos(request):
 def borrar_favoritos(request, pk):
     Favoritos.objects.get(pk=pk).delete()
     return redirect('favoritos:index')
+
+def detalle_favoritos(request, pk):
+    favorito = Favoritos.objects.get(pk=pk)
+    return render(request,'favoritos/detalle.html', context={'object':favorito})

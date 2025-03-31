@@ -8,4 +8,5 @@ urlpatterns = [
     path('', index_favoritos, name='index'),
     path('crear', crear_favoritos),
     path('borrar/<int:pk>', borrar_favoritos,name='borrar'),
+    path('deatlle/<int:pk>', detalle_favoritos,name='detalle'),
 ]
