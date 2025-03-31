@@ -6,7 +6,7 @@
     <title>Document</title>
   </head>
   <body>
-    <h1>Nuevo Favorito</h1>
+    <h1>{{titulo}}</h1>
     <p><a href="{% url 'favoritos:index' %}">Atras</a></p>
     <form method="POST">
       {% csrf_token %} {{ form.as_p}}

@@ -30,7 +30,8 @@ def crear_favoritos(request):
 
             
     context = {
-            'form':form
+            'form':form,
+            'titulo':'Crear favorito'
         }
        
     return render(request, 'favoritos/crear.html',context)
@@ -61,7 +62,8 @@ def actualizar_favoritos(request, pk):
 
             
     context = {
-            'form':form
+            'form':form,
+            'titulo':'Actualizar Favorito'
         }
        
     return render(request, 'favoritos/crear.html',context)
